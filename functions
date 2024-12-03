@@ -1,0 +1,39 @@
+#!/usr/bin/bash
+
+greet_user() {
+    echo " Hello, $1! Welcome to Bash Scripting" How is your experience? $2!
+}
+
+kitchen() {
+    echo "Hello I am in the [Kitchen] cooking"
+    pantry
+}
+
+bedroom() {
+    echo "Hello from the [Bedroom], I am dressing up"
+}
+
+pantry() {
+    echo "Hello from the [Pantry], I am storing the foods"
+}
+
+greet_user "Akor" "fine"
+#kitchen
+#pantry
+#bedroom
+
+#number_doubler() {
+    #local result=$(($1 * 2))
+    #echo $result
+#}
+
+#number_doubler "3"
+
+number_doubler() {
+    local result=$(($1 * 2))
+    return $result
+}
+
+number_doubler "10"
+
+echo "$?"
